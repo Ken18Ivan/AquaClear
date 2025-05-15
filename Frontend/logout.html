@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logging Out...</title>
+  <meta http-equiv="refresh" content="2;url=login.html">
+</head>
+<body>
+  <noscript>
+    <p>JavaScript is required to log out. Please enable JavaScript and try again.</p>
+  </noscript>
+  <script>
+    // Call the logout API and clear local storage
+    fetch('../Backend/api/logout.php')
+      .then(() => {
+        localStorage.clear();
+        window.location.href = 'login.html';
+      })
+      .catch(() => {
+        alert('Logout failed. Please try again.');
+      });
+  </script>
+</body>
+</html>

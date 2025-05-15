@@ -1,0 +1,6 @@
+{
+    "require": {
+        "facebook/graph-sdk": "*",
+        "google/apiclient": "^2.18"
+    }
+}
